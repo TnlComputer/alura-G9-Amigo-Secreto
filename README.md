@@ -12,7 +12,7 @@ El motivo es cargar los amigos y despues sortear cual es el amigo secreto
 
 El juego es cargar los nombres de los amigos
 
-Proyecto Terminado
+### Proyecto Terminado
 
 una vez que agregaste la cantidad que quieras de amigos.
 
@@ -20,7 +20,7 @@ puedes pulsar el boton sortear amigo por unica vez y te data el amigo sorteado.
 
 Suerte si lo usas
 
-Desarrollador Jorge Martinez
+### Desarrollador Jorge Martinez
 
 https://tnlcomputer.github.io/alura-G9-Amigo-Secreto/
 
