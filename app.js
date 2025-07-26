@@ -23,13 +23,26 @@
 
 
 let amigos = [];
-function agregarAmigo(nombre) {
+
+// Funciones para manejar la lista de amigos
+// Agrega un amigo al array
+function agregarAmigo() {
+  let nombre = document.getElementById("amigo").value;
+  if (nombre.trim() === "") {
+    alert("Por favor, ingresa un nombre válido.");
+    return;
+  }
+  console.log(nombre);
   amigos.push(nombre);
+  console.log(amigos)
+  limpiarNombre();
 }
 
+console.log(amigos);
 function actualizarAmigo(indice, nuevoNombre) {
   if (indice >= 0 && indice < amigos.length) {
     amigos[indice] = nuevoNombre;
+    alert("¡Hiciste clic en el botón!");
   } else {
     console.log("Índice fuera de rango");
   }
@@ -54,7 +67,7 @@ function mostrarAmigos() {
   });
 }
 
-function reiniciarJuego() {
-  amigos = [];
-  console.log("El juego ha sido reiniciado. La lista de amigos está vacía.");
+
+function limpiarNombre() {
+  document.querySelector('#amigo').value = '';
 }
