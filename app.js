@@ -5,17 +5,53 @@
 let amigos = [];
 
 // Agrega un amigo a la lista
-function agregarAmigo() {
-  let nombre = document.getElementById("amigo").value;
+// function agregarAmigo() {
+//   let nombre = document.getElementById("amigo").value;
 
-  if (nombre.trim() === "") {
+//   if (nombre.trim() === "") {
+//     alert("Por favor, ingresa un nombre de un amigo válido.");
+//     return;
+//   }
+
+//   const nombreNormalizado = nomber.charAt(0).toUpperCase() + nombre.slice(1).toLowerCase();
+
+//   // Verifico si ya existe el amigo con ese nombre (ignorando mayúsculas)
+//   const yaExiste = amigos.some(amigo => amigo === nombreNormalizado);
+
+//   if (yaExiste) {
+//     alert("Ese amigo ya está en la lista.");
+//     return;
+//   }
+
+//   amigos.push(nombre);
+//   mostrarAmigos();
+//   document.querySelector('#amigo').value = '';
+// }
+
+function agregarAmigo() {
+  let nombre = document.getElementById("amigo").value.trim();
+
+  if (nombre === "") {
     alert("Por favor, ingresa un nombre de un amigo válido.");
     return;
   }
-  amigos.push(nombre);
+
+  // Normalizo el nombre: primera letra mayúscula, resto minúsculas
+  const nombreNormalizado = nombre.charAt(0).toUpperCase() + nombre.slice(1).toLowerCase();
+
+  // Verifico si ya existe en el array
+  const yaExiste = amigos.includes(nombreNormalizado);
+
+  if (yaExiste) {
+    alert("Ese amigo ya está en la lista.");
+    return;
+  }
+
+  amigos.push(nombreNormalizado);
   mostrarAmigos();
   document.querySelector('#amigo').value = '';
 }
+
 
 // Muestro amigos ingresados en la lista
 function mostrarAmigos() {
@@ -61,7 +97,7 @@ function sortearAmigo() {
   li.textContent = `🎊 ¡Felicitaciones! El amigo sorteado es: ${nombreCapitalizado}`;
   resultado.appendChild(li);
 
-  // desabilito el boton de sortear parta que no se pueda sortear mas de una vez
+  // deshabilito el boton de sortear parta que no se pueda sortear mas de una vez
   document.querySelector(".button-draw").disabled = true;
 }
 
