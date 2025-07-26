@@ -1,73 +1,64 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 
 
-// Desafío: Crear un juego de amigos
-// Instrucciones:
-// 1. Crea un array vacío llamado `amigos`.
-// 2. Crea una función `agregarAmigo(nombre)` que agregue un amigo al array `amigos`.
-// 3. Crea una función `actualizarAmigo(indice, nuevoNombre)` que actualice el nombre de un amigo en el array `amigos` según su índice.
-// 4. Crea una función `sortearAmigos()` que seleccione un amigo al azar del array `amigos` y lo <retorne className=""></retorne>
-// 5. Crea una función `mostrarAmigos()` que muestre todos los amigos en el array `amigos`.
-// 6. Crea una función `reiniciarJuego()` que vacíe el array `amigos` y muestre un mensaje indicando que el juego ha sido reiniciado.
-// Ejemplo de uso:
-// agregarAmigo("Juan");  // agregarAmigo("María");
-// agregarAmigo("Pedro"); // mostrarAmigos(); // 1. Juan, 2. María, 3. <Pedro></Pedro>
-// actualizarAmigo(1, "Ana"); // sortearAmigos(); // Retorna un amigo al azar
-// mostrarAmigos(); // 1. Juan, 2. Ana, 3. <Pedro></Pedro>  
-// reiniciarJuego(); // El juego ha sido reiniciado. La lista de amigos está vacía.
-// Nota: Asegúrate de manejar los casos en los que el índice esté fuera de rango o el array esté vacío className="" 
-// para evitar errores.
-// No es necesario utilizar ningún framework o librería externa, solo JavaScript puro.
-// Puedes probar tu código en un entorno de JavaScript o en la consola del navegador.
-// ¡Buena <suerte!> </suerte!>  
-
-
+// Desafío: Creo un sorteo de los amigos
 let amigos = [];
 
-// Funciones para manejar la lista de amigos
-// Agrega un amigo al array
+// Agrega un amigo a la lista
 function agregarAmigo() {
   let nombre = document.getElementById("amigo").value;
+
   if (nombre.trim() === "") {
-    alert("Por favor, ingresa un nombre válido.");
+    alert("Por favor, ingresa un nombre de un amigo válido.");
     return;
   }
-  console.log(nombre);
   amigos.push(nombre);
-  console.log(amigos)
-  limpiarNombre();
-}
-
-console.log(amigos);
-function actualizarAmigo(indice, nuevoNombre) {
-  if (indice >= 0 && indice < amigos.length) {
-    amigos[indice] = nuevoNombre;
-    alert("¡Hiciste clic en el botón!");
-  } else {
-    console.log("Índice fuera de rango");
-  }
-}
-
-function sortearAmigos() {
-  if (amigos.length === 0) {
-    console.log("No hay amigos para sortear");
-    return;
-  }
-  const indiceAleatorio = Math.floor(Math.random() * amigos.length);
-  return amigos[indiceAleatorio];
-}
-
-function mostrarAmigos() {
-  if (amigos.length === 0) {
-    console.log("No hay amigos en la lista");
-    return;
-  }
-  amigos.forEach((amigo, index) => {
-    console.log(`${index + 1}. ${amigo}`);
-  });
-}
-
-
-function limpiarNombre() {
+  mostrarAmigos();
   document.querySelector('#amigo').value = '';
 }
+
+// Muestro amigos ingresados en la lista
+function mostrarAmigos() {
+  const listaAmigos = document.getElementById("listaAmigos");
+
+  // Limpia la lista antes de mostrar la los amigos ingrsados
+  listaAmigos.innerHTML = "";
+
+  if (amigos.length === 0) {
+    console.log("No hay nombres de amigos en la lista");
+    return;
+  }
+
+  amigos.forEach((amigo, index) => {
+    const li = document.createElement("li");
+    const nombreCapitalizado = amigo.charAt(0).toUpperCase() + amigo.slice(1).toLowerCase();
+    li.textContent = `${nombreCapitalizado}`;
+    listaAmigos.appendChild(li);
+  });
+
+}
+
+// sorteo el amigo secreto y lo muestro en un alert y si no hay amigos otro alert con un mensaje.
+function sortearAmigo() {
+  const listaAmigos = document.getElementById("listaAmigos");
+
+  // Borrar la lista mostrada
+  listaAmigos.innerHTML = "";
+
+  if (amigos.length === 0) {
+    alert("No hay nombres de amigos para sortear");
+    return;
+  }
+
+  const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+  const amigoSorteado = amigos[indiceAleatorio];
+
+  // reemplazo el nombre a la primer letra mayuscula y el resto en minuscula
+  const nombreCapitalizado = amigoSorteado.charAt(0).toUpperCase() + amigoSorteado.slice(1).toLowerCase();
+
+  const resultado = document.getElementById("resultado");
+  const li = document.createElement("li");
+  li.textContent = `🎊 ¡Felicitaciones! El amigo sorteado es: ${nombreCapitalizado}`;
+  resultado.appendChild(li);
+}
+
