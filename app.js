@@ -60,5 +60,8 @@ function sortearAmigo() {
   const li = document.createElement("li");
   li.textContent = `🎊 ¡Felicitaciones! El amigo sorteado es: ${nombreCapitalizado}`;
   resultado.appendChild(li);
+
+  // desabilito el boton de sortear parta que no se pueda sortear mas de una vez
+  document.querySelector(".button-draw").disabled = true;
 }
 
