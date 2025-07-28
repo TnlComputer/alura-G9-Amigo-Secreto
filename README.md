@@ -6,17 +6,21 @@
 
 ## Índice
 
-## 🧩 ¿Cómo funciona?
+🧩 ¿Cómo funciona?
 
-1. Ingresá los nombres de todos los participantes.  
-2. Una vez que estén todos, presioná **"Sortear Amigo"**.  
-3. El sistema elegirá un "Amigo Secreto" al azar.  
-4. También podés reiniciar el juego y comenzar desde cero.
+    Ingresá los nombres de todos los participantes.
 
-### Proyecto Terminado
+    Cuando hayas agregado a todos, presioná el botón "Sortear Amigo".
 
-Una vez que agregaste la cantidad que quieras de amigos,  
-podés pulsar el botón **Sortear Amigo** por única vez y te da el amigo sorteado.
+    El sistema elegirá al azar el "Amigo Secreto" para cada participante.
+
+    Si querés, podés presionar el botón "Reiniciar" para borrar todo y comenzar un nuevo sorteo desde cero.
+
+Después de agregar la cantidad deseada de amigos,
+podés presionar el botón Sortear Amigo una sola vez para obtener el resultado del sorteo.
+
+¡Probá el juego y organizá tu Amigo Secreto de forma fácil y divertida!
+No más listas confusas ni sorteos manuales: con un clic, todo listo para compartir la alegría.
 
 🔗 [Ver el proyecto en vivo](https://tnlcomputer.github.io/alura-G9-Amigo-Secreto/)
 
