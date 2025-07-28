@@ -22,18 +22,20 @@ podés presionar el botón Sortear Amigo una sola vez para obtener el resultado 
 ¡Probá el juego y organizá tu Amigo Secreto de forma fácil y divertida!
 No más listas confusas ni sorteos manuales: con un clic, todo listo para compartir la alegría.
 
-🔗 [Ver el proyecto en vivo](https://tnlcomputer.github.io/alura-G9-Amigo-Secreto/)
+🔗 Ver el proyecto en vivo
+👨‍💻 Desarrollador
 
-### Desarrollador
+Jorge Gustavo Martinez
+💼 Analista Programador – Desarrollador Full Stack
+📍 Buenos Aires, Argentina
+⚙️ Tecnologías Utilizadas
 
-Jorge Martinez
+    🧱 HTML5 — estructura semántica del contenido
 
-https://tnlcomputer.github.io/alura-G9-Amigo-Secreto/
+    🎨 CSS3 — estilos responsivos y diseño visual
 
-Desarrollado con tecnologías:
-
-HTML, CSS y JavaScript
-
+    ⚡ JavaScript — lógica del sorteo y manejo dinámico del DOM
+    
 ---
 
 ## Licencia
