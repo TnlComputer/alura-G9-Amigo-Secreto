@@ -23,9 +23,11 @@ podés presionar el botón Sortear Amigo una sola vez para obtener el resultado 
 No más listas confusas ni sorteos manuales: con un clic, todo listo para compartir la alegría.
 
 🔗 Ver el proyecto en vivo
-👨‍💻 Desarrollador
+
+## 👨‍💻 Desarrollador
 
 Jorge Gustavo Martinez
+
 💼 Analista Programador – Desarrollador Full Stack
 📍 Buenos Aires, Argentina
 ⚙️ Tecnologías Utilizadas
@@ -35,6 +37,8 @@ Jorge Gustavo Martinez
     🎨 CSS3 — estilos responsivos y diseño visual
 
     ⚡ JavaScript — lógica del sorteo y manejo dinámico del DOM
+
+    📦 Git — control de versiones y colaboración
     
 ---
 
