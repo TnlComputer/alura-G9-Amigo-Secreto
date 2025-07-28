@@ -1,8 +1,7 @@
 # Alura G9 - Juego del Amigo Secreto 🎁
 
-<img width="2288" height="1272" alt="imagen" src="https://github.com/user-attachments/assets/c71bdea8-6311-43e6-a1f8-e4624b74a45b" />
-
-<img width="200" height="200" alt="imagen" src="https://github.com/TnlComputer/alura-G9-Amigo-Secreto/blob/main/Insignia%20Challwnge%20Sorteo%20Amigo%20-%2026-07-2025.webp" />
+<img width="2288" height="1272" alt="imagen" src="https://github.com/TnlComputer/alura-G9-Amigo-Secreto/blob/main/portada amigo secreoto.png" />
+<img width="200" height="200" alt="imagen" src="https://github.com/TnlComputer/alura-G9-Amigo-Secreto/blob/main/Insignia%20Challenge%20Sorteo%20Amigo.webp" />
 
 ## Índice
 
@@ -22,7 +21,9 @@ podés presionar el botón Sortear Amigo una sola vez para obtener el resultado 
 ¡Probá el juego y organizá tu Amigo Secreto de forma fácil y divertida!
 No más listas confusas ni sorteos manuales: con un clic, todo listo para compartir la alegría.
 
-🔗 Ver el proyecto en vivo
+
+## 🔗 Ver el proyecto en vivo
+
 
 ## 👨‍💻 Desarrollador
 
@@ -30,7 +31,9 @@ Jorge Gustavo Martinez
 
 💼 Analista Programador – Desarrollador Full Stack
 📍 Buenos Aires, Argentina
-⚙️ Tecnologías Utilizadas
+
+
+## ⚙️ Tecnologías Utilizadas
 
     🧱 HTML5 — estructura semántica del contenido
 
