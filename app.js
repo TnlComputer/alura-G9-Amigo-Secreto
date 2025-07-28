@@ -5,29 +5,6 @@
 let amigos = [];
 
 // Agrega un amigo a la lista
-// function agregarAmigo() {
-//   let nombre = document.getElementById("amigo").value;
-
-//   if (nombre.trim() === "") {
-//     alert("Por favor, ingresa un nombre de un amigo válido.");
-//     return;
-//   }
-
-//   const nombreNormalizado = nomber.charAt(0).toUpperCase() + nombre.slice(1).toLowerCase();
-
-//   // Verifico si ya existe el amigo con ese nombre (ignorando mayúsculas)
-//   const yaExiste = amigos.some(amigo => amigo === nombreNormalizado);
-
-//   if (yaExiste) {
-//     alert("Ese amigo ya está en la lista.");
-//     return;
-//   }
-
-//   amigos.push(nombre);
-//   mostrarAmigos();
-//   document.querySelector('#amigo').value = '';
-// }
-
 function agregarAmigo() {
   let nombre = document.getElementById("amigo").value.trim();
 
