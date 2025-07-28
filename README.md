@@ -1,23 +1,25 @@
-# Alura-G9-Amigo-Secreto
+# Alura G9 - Juego del Amigo Secreto 🎁
 
-Chellenge Amigo Secreto
+Este es un desafío creado como práctica de HTML, CSS y JavaScript.
 
-El motivo es cargar los amigos y despues sortear cual es el amigo secreto
+## 🧩 ¿Cómo funciona?
 
-El juego es cargar los nombres de los amigos
+1. Ingresá los nombres de todos los participantes.
+2. Una vez que estén todos, presioná **"Sortear Amigo"**.
+3. El sistema elegirá un "Amigo Secreto" al azar.
+4. También podés reiniciar el juego y comenzar desde cero.
 
-una vez que agregaste la cantidad que quieras de amigos.
+## 🛠️ Tecnologías usadas
 
-puedes pulsar el bontron sortear amigo por unica vez y te data el amigo sorteado.
+- HTML
+- CSS
+- JavaScript
 
-Suerte si lo usas
+🔗 [Ver el proyecto en vivo](https://tnlcomputer.github.io/alura-G9-Amigo-Secreto/)
 
-https://tnlcomputer.github.io/alura-G9-Amigo-Secreto/
+---
 
-Esta desarrollado en tecnologia
-
-HTML, CSS y JavaSccript
-
+¡Gracias por probarlo!
 
 
 
