@@ -87,8 +87,8 @@ function sortearAmigo() {
   // Borrar la lista mostrada
   listaAmigos.innerHTML = "";
 
-  if (amigos.length === 0) {
-    alert("No hay nombres de amigos para sortear");
+  if (amigos.length < 2) {
+    alert("Debe haber al menos 2 amigos para realizar el sorteo.");
     return;
   }
 
@@ -103,7 +103,7 @@ function sortearAmigo() {
   li.textContent = `🎊 ¡Felicitaciones! El amigo sorteado es: ${nombreCapitalizado}`;
   resultado.appendChild(li);
 
-  // deshabilito el boton de sortear parta que no se pueda sortear mas de una vez
+  // deshabilito el boton de sortear para que no se pueda sortear mas de una vez
   document.querySelector(".button-draw").disabled = true;
 }
 
