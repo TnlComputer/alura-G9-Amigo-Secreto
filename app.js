@@ -33,8 +33,6 @@ function agregarAmigo() {
 // Muestro amigos ingresados en la lista
 function mostrarAmigos() {
   const listaAmigos = document.getElementById("listaAmigos");
-
-  // Limpia la lista antes de mostrar la los amigos ingrsados
   listaAmigos.innerHTML = "";
 
   if (amigos.length === 0) {
@@ -44,11 +42,42 @@ function mostrarAmigos() {
 
   amigos.forEach((amigo, index) => {
     const li = document.createElement("li");
+
+    // Botón editar solo con el ícono de lápiz y menos margen
+    const btnEditar = document.createElement("button");
+    btnEditar.textContent = "✏️";
+    btnEditar.title = "Editar";
+    btnEditar.style.marginRight = "4px"; // Menos espacio
+    btnEditar.style.background = "none";
+    btnEditar.style.border = "none";
+    btnEditar.style.cursor = "pointer";
+    btnEditar.style.padding = "2px 4px";
+    btnEditar.onclick = function () {
+      editarAmigo(index);
+    };
+
     const nombreCapitalizado = amigo.charAt(0).toUpperCase() + amigo.slice(1).toLowerCase();
-    li.textContent = `${nombreCapitalizado}`;
+
+    li.appendChild(btnEditar); // El botón a la izquierda
+    li.appendChild(document.createTextNode(`${nombreCapitalizado}`));
+
     listaAmigos.appendChild(li);
   });
+}
 
+// Función para editar un amigo
+function editarAmigo(index) {
+  const nuevoNombre = prompt("Edita el nombre del amigo:", amigos[index]);
+  if (nuevoNombre && nuevoNombre.trim() !== "") {
+    const nombreNormalizado = nuevoNombre.charAt(0).toUpperCase() + nuevoNombre.slice(1).toLowerCase();
+    // Verifica que no exista ya el nombre editado
+    if (amigos.includes(nombreNormalizado)) {
+      alert("Ese amigo ya está en la lista.");
+      return;
+    }
+    amigos[index] = nombreNormalizado;
+    mostrarAmigos();
+  }
 }
 
 // sorteo el amigo secreto y lo muestro en un alert y si no hay amigos otro alert con un mensaje.

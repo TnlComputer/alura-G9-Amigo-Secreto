@@ -5,15 +5,13 @@
 
 ## Índice
 
-🧩 ¿Cómo funciona?
+## 🧩 ¿Cómo funciona?
 
-    Ingresá los nombres de todos los participantes.
-
-    Cuando hayas agregado a todos, presioná el botón "Sortear Amigo".
-
-    El sistema elegirá al azar el "Amigo Secreto" para cada participante.
-
-    Si querés, podés presionar el botón "Reiniciar" para borrar todo y comenzar un nuevo sorteo desde cero.
+- Ingresá los nombres de todos los participantes.
+- Si te equivocaste, podés editar cualquier nombre haciendo clic en el ícono ✏️ (lápiz) que aparece a la izquierda de cada amigo en la lista.
+- Cuando hayas agregado a todos, presioná el botón "Sortear Amigo".
+- El sistema elegirá al azar el "Amigo Secreto" para cada participante.
+- Si querés, podés presionar el botón "Reiniciar" para borrar todo y comenzar un nuevo sorteo desde cero.
 
 Después de agregar la cantidad deseada de amigos,
 podés presionar el botón Sortear Amigo una sola vez para obtener el resultado del sorteo.
@@ -54,8 +52,8 @@ Esto significa que podés usar, modificar y distribuir libremente este código, 
 Para más información, visitá:  
 [https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/)
 
-   
 
-  
 
-    
+
+
+
