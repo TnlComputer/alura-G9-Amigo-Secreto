@@ -82,11 +82,6 @@ function editarAmigo(index) {
 
 // sorteo el amigo secreto y lo muestro en un alert y si no hay amigos otro alert con un mensaje.
 function sortearAmigo() {
-  const listaAmigos = document.getElementById("listaAmigos");
-
-  // Borrar la lista mostrada
-  listaAmigos.innerHTML = "";
-
   if (amigos.length < 2) {
     alert("Debe haber al menos 2 amigos para realizar el sorteo.");
     return;
@@ -95,7 +90,6 @@ function sortearAmigo() {
   const indiceAleatorio = Math.floor(Math.random() * amigos.length);
   const amigoSorteado = amigos[indiceAleatorio];
 
-  // reemplazo el nombre a la primer letra mayuscula y el resto en minuscula
   const nombreCapitalizado = amigoSorteado.charAt(0).toUpperCase() + amigoSorteado.slice(1).toLowerCase();
 
   const resultado = document.getElementById("resultado");
@@ -103,7 +97,6 @@ function sortearAmigo() {
   li.textContent = `🎊 ¡Felicitaciones! El amigo sorteado es: ${nombreCapitalizado}`;
   resultado.appendChild(li);
 
-  // deshabilito el boton de sortear para que no se pueda sortear mas de una vez
   document.querySelector(".button-draw").disabled = true;
 }
 
