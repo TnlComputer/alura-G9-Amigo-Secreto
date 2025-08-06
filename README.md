@@ -10,11 +10,11 @@
 - Ingresá los nombres de todos los participantes.
 - Si te equivocaste, podés editar cualquier nombre haciendo clic en el ícono ✏️ (lápiz) que aparece a la izquierda de cada amigo en la lista.
 - Cuando hayas agregado a todos, presioná el botón "Sortear Amigo".
-- El sistema solo permite realizar el sorteo si hay al menos 2 amigos en la lista. Si intentás sortear con menos de 2, verás un mensaje y podrás seguir agregando participantes.
-- El sistema elegirá al azar el "Amigo Secreto" para cada participante.
-- Si querés, podés presionar el botón "Reiniciar" para borrar todo y comenzar un nuevo sorteo desde cero.
+- El sistema solo permite realizar el sorteo si hay al menos 3 amigos en la lista. Si intentás sortear con menos de 3, verás un mensaje y podrás seguir agregando participantes.
+- El sistema elegirá al azar los 3 primeros lugares "Amigo Secreto" y dara los nombres en ese orden.
+- Si querés, podés presionar el botón "Reiniciar" para borrar todo los amigos ingresados y comenzar un nuevo sorteo.
 
-Después de agregar la cantidad deseada de amigos,
+Después de agregar la cantidad deseada de amigos (mínimo 3),
 podés presionar el botón Sortear Amigo una sola vez para obtener el resultado del sorteo.
 
 ¡Probá el juego y organizá tu Amigo Secreto de forma fácil y divertida!
