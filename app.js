@@ -13,13 +13,16 @@ function agregarAmigo() {
     return;
   }
 
-  // Normalizo el nombre: primera letra mayúscula, resto minúsculas
+  // Validación: solo letras, espacios, tildes, ñ, guiones o apóstrofes
+  const soloLetras = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s'-]+$/;
+  if (!soloLetras.test(nombre)) {
+    alert("El nombre solo puede contener letras (sin números ni símbolos extraños).");
+    return;
+  }
+
   const nombreNormalizado = nombre.charAt(0).toUpperCase() + nombre.slice(1).toLowerCase();
 
-  // Verifico si ya existe en el array
-  const yaExiste = amigos.includes(nombreNormalizado);
-
-  if (yaExiste) {
+  if (amigos.includes(nombreNormalizado)) {
     alert("Ese amigo ya está en la lista.");
     return;
   }
@@ -28,7 +31,6 @@ function agregarAmigo() {
   mostrarAmigos();
   document.querySelector('#amigo').value = '';
 }
-
 
 // Muestro amigos ingresados en la lista
 function mostrarAmigos() {
@@ -43,11 +45,10 @@ function mostrarAmigos() {
   amigos.forEach((amigo, index) => {
     const li = document.createElement("li");
 
-    // Botón editar solo con el ícono de lápiz y menos margen
     const btnEditar = document.createElement("button");
     btnEditar.textContent = "✏️";
     btnEditar.title = "Editar";
-    btnEditar.style.marginRight = "4px"; // Menos espacio
+    btnEditar.style.marginRight = "4px";
     btnEditar.style.background = "none";
     btnEditar.style.border = "none";
     btnEditar.style.cursor = "pointer";
@@ -58,9 +59,8 @@ function mostrarAmigos() {
 
     const nombreCapitalizado = amigo.charAt(0).toUpperCase() + amigo.slice(1).toLowerCase();
 
-    li.appendChild(btnEditar); // El botón a la izquierda
+    li.appendChild(btnEditar);
     li.appendChild(document.createTextNode(`${nombreCapitalizado}`));
-
     listaAmigos.appendChild(li);
   });
 }
@@ -69,12 +69,19 @@ function mostrarAmigos() {
 function editarAmigo(index) {
   const nuevoNombre = prompt("Edita el nombre del amigo:", amigos[index]);
   if (nuevoNombre && nuevoNombre.trim() !== "") {
+    const soloLetras = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s'-]+$/;
+    if (!soloLetras.test(nuevoNombre)) {
+      alert("El nombre solo puede contener letras (sin números ni símbolos extraños).");
+      return;
+    }
+
     const nombreNormalizado = nuevoNombre.charAt(0).toUpperCase() + nuevoNombre.slice(1).toLowerCase();
-    // Verifica que no exista ya el nombre editado
+
     if (amigos.includes(nombreNormalizado)) {
       alert("Ese amigo ya está en la lista.");
       return;
     }
+
     amigos[index] = nombreNormalizado;
     mostrarAmigos();
   }
@@ -82,36 +89,68 @@ function editarAmigo(index) {
 
 // sorteo el amigo secreto y lo muestro en un alert y si no hay amigos otro alert con un mensaje.
 function sortearAmigo() {
-  if (amigos.length < 2) {
-    alert("Debe haber al menos 2 amigos para realizar el sorteo.");
+  if (amigos.length < 3) {
+    alert("Debe haber al menos 3 amigos para realizar el sorteo.");
     return;
   }
 
-  const indiceAleatorio = Math.floor(Math.random() * amigos.length);
-  const amigoSorteado = amigos[indiceAleatorio];
+  // Mezclar los amigos sin modificar el original
+  const amigosMezclados = [...amigos].sort(() => Math.random() - 0.5);
 
-  const nombreCapitalizado = amigoSorteado.charAt(0).toUpperCase() + amigoSorteado.slice(1).toLowerCase();
+  // Tomar los tres primeros
+  const [primero, segundo, tercero] = amigosMezclados;
 
   const resultado = document.getElementById("resultado");
-  const li = document.createElement("li");
-  li.textContent = `🎊 ¡Felicitaciones! El amigo sorteado es: ${nombreCapitalizado}`;
-  resultado.appendChild(li);
+  resultado.innerHTML = "";
+
+  const crearItem = (emoji, texto, nombre) => {
+    const li = document.createElement("li");
+    li.style.display = "flex";
+    li.style.alignItems = "center";
+    li.style.gap = "8px";
+
+    const icono = document.createElement("span");
+    icono.textContent = emoji;
+    icono.style.fontSize = "1.2em";
+
+    const contenido = document.createElement("span");
+    contenido.textContent = `${texto}: ${nombre}`;
+
+    li.appendChild(icono);
+    li.appendChild(contenido);
+
+    return li;
+  };
+
+  resultado.appendChild(crearItem("🥇", "Primer lugar", primero));
+  resultado.appendChild(crearItem("🥈", "Segundo lugar", segundo));
+  resultado.appendChild(crearItem("🥉", "Tercer lugar", tercero));
 
   document.querySelector(".button-draw").disabled = true;
 }
 
-function reiniciarJuego() {
-  amigos = []; // Vacía la lista de amigos
 
-  // Limpia las listas del DOM
+function reiniciarJuego() {
+  amigos = [];
   document.getElementById("listaAmigos").innerHTML = "";
   document.getElementById("resultado").innerHTML = "";
-
-  // Reactiva el botón de sorteo
   document.querySelector(".button-draw").disabled = false;
-
-  // Limpia el input
   document.querySelector('#amigo').value = '';
-
   alert("¡El juego ha sido reiniciado!");
 }
+
+// function reiniciarJuego() {
+//   amigos = []; // Vacía la lista de amigos
+
+//   // Limpia las listas del DOM
+//   document.getElementById("listaAmigos").innerHTML = "";
+//   document.getElementById("resultado").innerHTML = "";
+
+//   // Reactiva el botón de sorteo
+//   document.querySelector(".button-draw").disabled = false;
+
+//   // Limpia el input
+//   document.querySelector('#amigo').value = '';
+
+//   alert("¡El juego ha sido reiniciado!");
+// }
