@@ -138,19 +138,3 @@ function reiniciarJuego() {
   document.querySelector('#amigo').value = '';
   alert("¡El juego ha sido reiniciado!");
 }
-
-// function reiniciarJuego() {
-//   amigos = []; // Vacía la lista de amigos
-
-//   // Limpia las listas del DOM
-//   document.getElementById("listaAmigos").innerHTML = "";
-//   document.getElementById("resultado").innerHTML = "";
-
-//   // Reactiva el botón de sorteo
-//   document.querySelector(".button-draw").disabled = false;
-
-//   // Limpia el input
-//   document.querySelector('#amigo').value = '';
-
-//   alert("¡El juego ha sido reiniciado!");
-// }
